@@ -7,7 +7,7 @@ export function ProjectCard( { project } ) {
         project = {
             title: "Projeto sem título",
             description: "Descrição não disponível",
-            image: "/src/assets/capa1.png",
+            image: "/capa1.png",
             link: "",
             linkGitHub: "",
         }
@@ -16,7 +16,7 @@ export function ProjectCard( { project } ) {
     return (
         <div className="card">
             <div className="imageContainer">
-                <img src={project.image || "/src/assets/capa1.png"} alt={project.title} className="image" />
+                <img src={project.image || "/capa1.png"} alt={project.title} className="image" />
             </div>
             <div className="contentCard">
                 <h3 className="title">{project.title}</h3>
