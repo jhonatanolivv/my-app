@@ -5,7 +5,7 @@ import "./Hero.css"
 import { useEffect } from 'react'
 
 
-export function Hero( {name = "Jhonatan Oliveira", title = "Frontend Developer"} ) {
+export function Hero({ name = "Jhonatan Oliveira", title = "Frontend Developer" }) {
 
   const [scrolled, setScrolled] = useState(false)
 
@@ -29,7 +29,6 @@ export function Hero( {name = "Jhonatan Oliveira", title = "Frontend Developer"}
         <h1 className="name">{name}</h1>
         <h2 className="titleHero">{title}</h2>
         <div className="scrollIndicator">
-          <p>Scroll para ver mais</p>
           <div className="arrow"></div>
         </div>
       </div>

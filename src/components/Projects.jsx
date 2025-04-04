@@ -9,38 +9,38 @@ export function Projects() {
         {
             id: 1,
             title: "CritiCine",
-            description: "Descrição do projeto 1",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             image: "/capa1.png",
             link: "https://project-pipocareviews.vercel.app/",
             linkGitHub: "https://github.com/jhonatanolivv/repositorio-projeto-final.git",
         },
         {
             id: 2,
-            title: "Projeto 2",
-            description: "Descrição do projeto 2",
-            image: "/capa1.png",
-            link: "",
-            linkGitHub: "",
+            title: "MediHome",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            image: "/capa2.png",
+            link: "https://medi-home-phi.vercel.app/",
+            linkGitHub: "https://github.com/jhonatanolivv/MediHome.git",
 
-            },
-            {
+        },
+        {
             id: 3,
             title: "Projeto 3",
-            description: "Descrição do projeto 3",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             image: "/capa1.png",
             link: "",
             linkGitHub: "",
-            },
+        },
     ]
 
-return (
-    <section className="projects" id="projects">
-        <h2 className="heading">MEUS PROJETOS</h2>
-        <div className="container">
-            {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />	
-            ))}
-        </div>
-    </section>
-)
+    return (
+        <section className="projects" id="projects">
+            <h2 className="heading">MEUS PROJETOS</h2>
+            <div className="container">
+                {projects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
+            </div>
+        </section>
+    )
 }
