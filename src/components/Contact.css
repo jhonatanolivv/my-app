@@ -1,34 +1,41 @@
 .contact {
-  padding: 50px 20px;
+  padding: 60px 20px;
   background-color: #181818;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .headingContact {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 60px;
-  color: rgb(255 255 255);
+  margin-bottom: 50px;
+  color: #fff;
   position: relative;
 }
 
-.heading::after {
+.headingContact::after {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: rgb(255 255 255);
+  background-color: #fff;
+  border-radius: 2px;
 }
 
 .containerContact {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .containerContact {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .info {
@@ -40,37 +47,40 @@
 .info h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: rgb(255 255 255);
+  color: #fff;
 }
 
 .info p {
-  color: rgb(255 255 255);
+  color: #ccc;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
 .contactInfo {
-  margin-top: 20px;
-  color: rgb(255 255 255);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #eee;
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
+  gap: 10px;
 }
 
 .icon {
-  font-size: 1.2rem;
-  margin-right: 15px;
-  width: 24px;
-  text-align: center;
+  width: 20px;
+  height: 20px;
+  color: #ccc;
+  flex-shrink: 0;
 }
 
 .form {
   background-color: #fff;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .formGroup {
@@ -89,7 +99,7 @@
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
@@ -97,19 +107,19 @@
 .formGroup input:focus,
 .formGroup textarea:focus {
   outline: none;
-  border-color: #333;
+  border-color: #111;
 }
 
 .submitButton {
   background-color: #111;
   color: #fff;
   border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-size: 20px;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 .submitButton:hover {
@@ -125,34 +135,23 @@
   color: #28a745;
   margin-top: 15px;
   text-align: center;
+  font-weight: 500;
+}
+
+.successMessage {
+  margin-top: 10px;
+  color: #4bb543;
+  font-size: 0.9rem;
+}
+
+.errorMessage {
+  margin-top: 10px;
+  color: #ff4d4f;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 480px) {
   .contact {
-    grid-template-columns: 1fr;
-    padding: 20px 10px;
-    width: 100%;
-  }
-
-  .containerContact {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info {
-    display: flex;
-    padding: 0px 20px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .containerContact {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .contact {
-    height: 100%;
+    padding: 30px 15px;
   }
 }

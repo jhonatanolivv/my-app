@@ -2,7 +2,7 @@
 
 import "./ProjectCard.css"
 
-export function ProjectCard( { project } ) {
+export function ProjectCard({ project }) {
     if (!project) {
         project = {
             title: "Projeto sem título",
@@ -20,14 +20,30 @@ export function ProjectCard( { project } ) {
             </div>
             <div className="contentCard">
                 <h3 className="title">{project.title}</h3>
-                <p className="description">{project.description}</p>
+                <div className="description">
+                    <h4>🛠️ Tecnologias utilizadas:</h4>
+                    <ul>
+                        {(project.technologies || []).map((tech, index) => (
+                            <li key={index}>• {tech}</li>
+                        ))}
+                    </ul>
+
+                    <h4>💡 Funcionalidades:</h4>
+                    <ul>
+                        {(project.functionalities || []).map((func, index) => (
+                            <li key={index}>• {func}</li>
+                        ))}
+                    </ul>
+                </div>
+
+
                 <div className="links">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="link">
-                    Ver projeto
-                </a>
-                <a href={project.linkGitHub} target="_blank" rel="noopener noreferrer" className="link">
-                    GitHub
-                </a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="link">
+                        Ver projeto
+                    </a>
+                    <a href={project.linkGitHub} target="_blank" rel="noopener noreferrer" className="link">
+                        GitHub
+                    </a>
                 </div>
             </div>
         </div>
